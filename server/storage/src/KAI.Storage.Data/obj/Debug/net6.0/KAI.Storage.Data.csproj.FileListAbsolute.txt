@@ -1,0 +1,12 @@
+D:\kai-portal\server\storage\src\KAI.Storage.Data\bin\Debug\net6.0\KAI.Storage.Data.deps.json
+D:\kai-portal\server\storage\src\KAI.Storage.Data\bin\Debug\net6.0\KAI.Storage.Data.dll
+D:\kai-portal\server\storage\src\KAI.Storage.Data\bin\Debug\net6.0\ref\KAI.Storage.Data.dll
+D:\kai-portal\server\storage\src\KAI.Storage.Data\bin\Debug\net6.0\KAI.Storage.Data.pdb
+D:\kai-portal\server\storage\src\KAI.Storage.Data\obj\Debug\net6.0\KAI.Storage.Data.csproj.AssemblyReference.cache
+D:\kai-portal\server\storage\src\KAI.Storage.Data\obj\Debug\net6.0\KAI.Storage.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\kai-portal\server\storage\src\KAI.Storage.Data\obj\Debug\net6.0\KAI.Storage.Data.AssemblyInfoInputs.cache
+D:\kai-portal\server\storage\src\KAI.Storage.Data\obj\Debug\net6.0\KAI.Storage.Data.AssemblyInfo.cs
+D:\kai-portal\server\storage\src\KAI.Storage.Data\obj\Debug\net6.0\KAI.Storage.Data.csproj.CoreCompileInputs.cache
+D:\kai-portal\server\storage\src\KAI.Storage.Data\obj\Debug\net6.0\KAI.Storage.Data.dll
+D:\kai-portal\server\storage\src\KAI.Storage.Data\obj\Debug\net6.0\ref\KAI.Storage.Data.dll
+D:\kai-portal\server\storage\src\KAI.Storage.Data\obj\Debug\net6.0\KAI.Storage.Data.pdb
