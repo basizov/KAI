@@ -2,22 +2,36 @@ using KAI.Storage.Api.Extensions;
 using KAI.Storage.Data.Constants;
 using KAI.Storage.Data.Extensions;
 
-var builder = WebApplication.CreateBuilder(args);
-var configuration = builder.Configuration;
+try
+{
+	var builder = WebApplication.CreateBuilder(args);
+	var configuration = builder.Configuration;
 
-builder.Logging.ClearProviders();
-builder.Logging.ConnectSerilog(configuration);
+	builder.Logging.ClearProviders();
+	builder.Logging.ConnectSerilog(configuration);
 
-builder.Services.ConnectControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.ConnectOpenApi();
+	builder.Services.AddHttpContextAccessor();
 
-var connectionString = configuration.GetConnectionString(ConfigContants.DB_CONTEXT_CONNECTION);
-builder.Services.ConnectDbContext(connectionString);
+	builder.Services.AddHttpClient();
+	builder.Services.ConnectControllers();
+	builder.Services.AddEndpointsApiExplorer();
+	builder.Services.ConnectOpenApi();
 
-var app = builder.Build();
+	var connectionString = configuration.GetConnectionString(ConfigContants.DB_CONTEXT_CONNECTION);
+	builder.Services.ConnectDbContext(connectionString);
 
-app.UseSwagger();
-app.UseSwaggerUI();
-app.MapControllers();
-await app.RunAsync();
+	var app = builder.Build();
+
+	app.UseSwagger();
+	app.UseSwaggerUI();
+	app.MapControllers();
+	await app.RunAsync();
+}
+catch (Exception ex)
+{
+
+}
+finally
+{
+
+}

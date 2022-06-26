@@ -7,15 +7,15 @@ namespace KAI.Storage.Data.Entities
 	{
 		public Guid Id { get; set; }
 
-		public Guid AuthorId { get; }
+		public Guid AuthorId { get; init; }
 
-		public string Name => default!;
+		public string Name { get; init; } = default!;
 
-		public FileExtension Extension { get; }
+		public FileExtension Extension { get; init; }
 
-		public ulong Size { get; }
+		public ulong Size { get; init; }
 
-		public DateTimeOffset Created { get; }
+		public DateTimeOffset Created { get; init; }
 
 		public bool IsDeleted { get; set; }
 	}

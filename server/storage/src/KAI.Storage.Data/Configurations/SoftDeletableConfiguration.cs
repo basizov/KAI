@@ -4,9 +4,10 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace KAI.Storage.Data.Configurations
 {
-	internal class SoftDeletableConfiguration : IEntityTypeConfiguration<ISoftDeletable>
+	internal class SoftDeletableConfiguration<TEntity> : IEntityTypeConfiguration<TEntity>
+		where TEntity : class, ISoftDeletable
 	{
-		public void Configure(EntityTypeBuilder<ISoftDeletable> builder)
+		public virtual void Configure(EntityTypeBuilder<TEntity> builder)
 		{
 			builder.HasIndex(dst => dst.IsDeleted);
 		}

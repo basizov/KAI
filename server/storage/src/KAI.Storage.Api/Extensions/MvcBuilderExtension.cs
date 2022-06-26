@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace KAI.Storage.Api.Extensions
 {
@@ -9,6 +10,13 @@ namespace KAI.Storage.Api.Extensions
 			return builder.AddJsonOptions(opt =>
 			{
 				opt.AllowInputFormatterExceptionMessages = true;
+				opt.JsonSerializerOptions.IncludeFields = false;
+				opt.JsonSerializerOptions.IgnoreReadOnlyFields = true;
+				opt.JsonSerializerOptions.IgnoreReadOnlyProperties = true;
+				opt.JsonSerializerOptions.MaxDepth = 2;
+				opt.JsonSerializerOptions.DictionaryKeyPolicy = JsonNamingPolicy.CamelCase;
+				opt.JsonSerializerOptions.NumberHandling = JsonNumberHandling.AllowNamedFloatingPointLiterals;
+				opt.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
 				opt.JsonSerializerOptions.Converters.Add(new JsonStringEnumMemberConverter());
 			});
 		}

@@ -4,9 +4,10 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace KAI.Storage.Data.Configurations
 {
-	internal class EntityWithIdConfiguration : IEntityTypeConfiguration<IEntityWithId>
+	internal class EntityWithIdConfiguration<TEntity> : IEntityTypeConfiguration<TEntity>
+		where TEntity : class, IEntityWithId
 	{
-		public void Configure(EntityTypeBuilder<IEntityWithId> builder)
+		public virtual void Configure(EntityTypeBuilder<TEntity> builder)
 		{
 			builder.HasKey(dst => dst.Id);
 		}

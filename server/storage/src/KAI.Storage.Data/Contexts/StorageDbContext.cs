@@ -16,7 +16,9 @@ namespace KAI.Storage.Data.Contexts
 		{
 			base.OnModelCreating(modelBuilder);
 
-			modelBuilder.ApplyConfigurationsFromAssembly(typeof(EntityWithIdConfiguration).Assembly);
+			modelBuilder.ApplyConfiguration(new EntityWithIdConfiguration<Entities.File>());
+			modelBuilder.ApplyConfiguration(new FileConfiguration());
+			modelBuilder.ApplyConfiguration(new SoftDeletableConfiguration<Entities.File>());
 		}
 	}
 }

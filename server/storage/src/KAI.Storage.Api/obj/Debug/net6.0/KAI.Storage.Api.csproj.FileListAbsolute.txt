@@ -51,3 +51,5 @@ D:\kai-portal\server\storage\src\KAI.Storage.Api\bin\Debug\net6.0\Microsoft.Exte
 D:\kai-portal\server\storage\src\KAI.Storage.Api\bin\Debug\net6.0\Npgsql.dll
 D:\kai-portal\server\storage\src\KAI.Storage.Api\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\kai-portal\server\storage\src\KAI.Storage.Api\bin\Debug\net6.0\Macross.Json.Extensions.dll
+D:\kai-portal\server\storage\src\KAI.Storage.Api\bin\Debug\net6.0\Humanizer.dll
+D:\kai-portal\server\storage\src\KAI.Storage.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
